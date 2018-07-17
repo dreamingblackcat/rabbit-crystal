@@ -1,6 +1,6 @@
 # rabbit-crystal
 
-TODO: Write a description here
+This is a direct port of Rabbit-Ruby gem to crystal language. Basically, it provides a converter class that lets you convert between unicode and zawgyi (Two conflicting fonts in Myanmar).
 
 ## Installation
 
@@ -9,20 +9,21 @@ Add this to your application's `shard.yml`:
 ```yaml
 dependencies:
   rabbit-crystal:
-    github: your-github-user/rabbit-crystal
+    github: dreamingblackcat/rabbit-crystal
 ```
 
 ## Usage
 
 ```crystal
-require "rabbit-crystal"
+require 'rabbit'
+
+rabbit = Rabbit::Converter.new
+
+rabbit.uni2zg("မင်္ဂလာပါ")  # returns zg strings "မဂၤလာပါ"
+
+rabbit.zg2uni("မဂၤလာပါ")   # returns unicode strings "မင်္ဂလာပါ"
+
 ```
-
-TODO: Write usage instructions here
-
-## Development
-
-TODO: Write development instructions here
 
 ## Contributing
 
@@ -34,4 +35,8 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [your-github-user](https://github.com/your-github-user) dreamingblackcat - creator, maintainer
+- [dreamingblackcat](https://github.com/dreamingblackcat) dreamingblackcat - creator, maintainer
+
+
+## License
+MIT

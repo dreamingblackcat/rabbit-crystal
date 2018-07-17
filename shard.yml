@@ -3,6 +3,8 @@ version: 0.1.0
 
 authors:
   - dreamingblackcat <dreamingblackcat10@gmail.com>
+description: |
+  A font converter library for converting between unicode and zawgyi fonts (two conflicting fonts in Myanmar language).
 
 crystal: 0.25.1
 
